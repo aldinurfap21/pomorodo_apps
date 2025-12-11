@@ -31,24 +31,21 @@ export default function ModeSelector({ currentMode, onModeChange }: ModeSelector
   }
   
   return (
-    <div className="flex justify-center gap-2 mb-6">
-      {modes.map((mode) => (
-        <button
-          key={mode.value}
-          onClick={() => handleModeChange(mode.value)}
-          className={`
-            px-6 py-2 rounded-lg font-medium
-            transition-all duration-200
-            ${currentMode === mode.value
-              ? 'bg-white text-gray-900 shadow-lg scale-105'
-              : 'bg-white/20 text-white/80 hover:bg-white/30'
-            }
-          `}
-        >
-          <span className="mr-2">{mode.emoji}</span>
-          {mode.label}
-        </button>
-      ))}
+    <div className="flex justify-center gap-3 mb-6">
+      {modes.map((m) => {
+        const active = currentMode === m.value
+        return (
+          <button
+            key={m.value}
+            onClick={() => handleModeChange(m.value)}
+            className={`px-5 py-2 rounded-lg font-medium transition-all duration-200 ${active ? 'text-white shadow-lg scale-105' : 'text-white/80 hover:bg-white/10'}`}
+            style={active ? { backgroundColor: 'var(--accent)' } : undefined}
+          >
+            <span className="mr-2">{m.emoji}</span>
+            {m.label}
+          </button>
+        )
+      })}
     </div>
   )
 }

@@ -21,15 +21,10 @@ export default function ModeLabel({ mode, completedCycles }: ModeLabelProps) {
   
   return (
     <div className="text-center mb-6">
-      <h2 className="text-2xl font-semibold text-white/90">
-        {getModeLabel()}
-      </h2>
-      
-      {/* Show session counter during focus time */}
+      <h2 className="text-2xl font-semibold text-accent">{getModeLabel()}</h2>
+
       {mode === TimerMode.FOCUS && (
-        <p className="text-sm text-white/60 mt-2">
-          Session #{completedCycles + 1}
-        </p>
+        <p className="text-sm muted mt-2">Session #{completedCycles + 1}</p>
       )}
     </div>
   )

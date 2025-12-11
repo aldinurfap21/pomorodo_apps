@@ -44,8 +44,10 @@ export default function Timer() {
   
   const showMusicSelector = mode === TimerMode.FOCUS && isRunning
   
+  const themeClass = mode === TimerMode.SHORT_BREAK ? 'theme-short' : mode === TimerMode.LONG_BREAK ? 'theme-long' : 'theme-focus'
+
   return (
-    <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
+    <div className={`timer-card ${themeClass} rounded-3xl p-8 shadow-lg max-w-xl mx-auto`}>
       <ModeSelector 
         currentMode={mode}
         onModeChange={switchMode}

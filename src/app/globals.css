@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #111827; /* gray-900 manual */
+  background-color: #0b1220; /* slightly adjusted dark background */
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,8 +21,33 @@ html {
 
 /* Custom utility class (opsional) */
 .text-gradient {
-  background: linear-gradient(to right, #c084fc, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* kept for legacy use; now renders with the accent color */
+  color: var(--accent);
 }
+
+/* Theme variables and small design tokens used by components */
+:root {
+  --accent:rgb(186, 73, 73); 
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.6);
+}
+
+.theme-focus { --accent: #BA4949; } 
+.theme-short { --accent: #3b82f6; }
+.theme-long  { --accent: #10b981; }
+
+.timer-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(8px);
+}
+
+/* removed gradient-based accent-fill; use --accent color directly */
+.accent-fill {
+  background: var(--accent);
+}
+
+.text-accent { color: var(--accent); }
+
+.muted { color: var(--muted); }
