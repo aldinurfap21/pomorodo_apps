@@ -1,3 +1,4 @@
+
 import Timer from "@/components/Timer"
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-white text-center mb-8">
           Pomodoro Timer
         </h1>
-        
+
         <Timer />
       </div>
     </main>

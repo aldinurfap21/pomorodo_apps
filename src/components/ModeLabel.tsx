@@ -1,3 +1,4 @@
+
 'use client'
 
 import { TimerMode } from '@/types/timer'
@@ -18,7 +19,7 @@ export default function ModeLabel({ mode, completedCycles }: ModeLabelProps) {
         return 'Long Break'
     }
   }
-  
+
   return (
     <div className="text-center mb-6">
       <h2 className="text-2xl font-semibold text-accent">{getModeLabel()}</h2>

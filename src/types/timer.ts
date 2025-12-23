@@ -1,4 +1,4 @@
-// src/types/timer.ts
+
 export enum TimerMode {
   FOCUS = 'focus',
   SHORT_BREAK = 'short break',

@@ -1,4 +1,5 @@
- 'use client'
+
+'use client'
 
 import { create } from 'zustand'
 import { TimerMode, TIMER_DURATIONS, type TimerState } from '@/types/timer'
@@ -12,6 +13,7 @@ interface TimerStore extends TimerState {
   tick: () => void
   switchMode: (newMode: TimerMode) => void
   completeSession: () => void
+  todayFocusTime: number
 }
 
 export const useTimerStore = create<TimerStore>((set, get) => ({
@@ -19,6 +21,7 @@ export const useTimerStore = create<TimerStore>((set, get) => ({
   timeLeft: TIMER_DURATIONS[TimerMode.FOCUS],
   isRunning: false,
   completedCycles: 0,
+  todayFocusTime: 0,
 
   start: () => {
     const { mode } = get()
@@ -46,12 +49,16 @@ export const useTimerStore = create<TimerStore>((set, get) => ({
   },
 
   tick: () => {
-    const { timeLeft, completeSession } = get()
+    const { timeLeft, completeSession, mode, todayFocusTime } = get()
+
+    const newFocusTime = mode === TimerMode.FOCUS ? todayFocusTime + 1 : todayFocusTime
+
     if (timeLeft <= 0) {
       completeSession()
+      set({ todayFocusTime: newFocusTime })
       return
     }
-    set({ timeLeft: timeLeft - 1 })
+    set({ timeLeft: timeLeft - 1, todayFocusTime: newFocusTime })
   },
 
   switchMode: (newMode) => {

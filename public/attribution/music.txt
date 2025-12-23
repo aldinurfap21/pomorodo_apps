@@ -1,0 +1,45 @@
+score 1:
+Music track: Cinematic by Aylex
+Source: https://freetouse.com/music
+score 2:
+Music track: Heroes by Sunova
+Source: https://freetouse.com/music
+score 3:
+Music track: Glorious by Aylex
+Source: https://freetouse.com/music
+score 4:
+Music track: Travelling by Aylex
+Source: https://freetouse.com/music
+score 5:
+Music track: Castle by Walen
+Source: https://freetouse.com/music
+phonk 1:
+Music track: Drifting by VTEMO
+Source: https://freetouse.com/music
+phonk 2:
+Music track: HEADPHONK by Walen
+Source: https://freetouse.com/music
+phonk 3:
+Music track: This Is Phonk by Aylex
+Source: https://freetouse.com/music
+phonk 4:
+Music track: LOUD by Aylex
+Source: https://freetouse.com/music
+phonk 5:
+Music track: Brazilian Hype by Walen
+Source: https://freetouse.com/music
+lofi 1:
+Music track: Bread by Lukrembo
+Source: https://freetouse.com/music
+lofi 2:
+Music track: This Is For You by Lukrembo
+Source: https://freetouse.com/music
+lofi 3:
+Music track: This Is For You by Lukrembo
+Source: https://freetouse.com/music
+lofi 4:
+Music track: Vibing by Pufino
+Source: https://freetouse.com/music
+lofi 5:
+Music track: Vibing by Pufino
+Source: https://freetouse.com/music

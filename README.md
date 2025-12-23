@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍅 Pomodoro Focus Timer
 
-## Getting Started
+Welcome to my personal take on a Pomodoro timer. This isn't just another timer; it's built to solve a very specific problem I had.
 
-First, run the development server:
+## ✨ Why this app exists
 
+**I built this because I was tired of opening YouTube for "Lofi beats to study to" and ending up watching 3 hours of random video essays.**
+
+Using YouTube for focus music is a trap. The algorithm is designed to distract you. This app gives me the curated audio I need (phonk, score, lofi) without the visual distractions, ads, or "Recommended" sidebar.
+
+It also hits specific requirements most other apps miss:
+- **Zero persistence**: Refresh the page, and everything resets. Each day is a fresh start.
+- **Intention oriented**: You can set a goal (e.g., "Study for 2 hours") to keep yourself accountable.
+- **Privacy first**: No databases, no tracking pixels. Everything runs locally in your browser.
+
+## 🛠️ The Tech Stack (And why I chose it)
+
+I made specific technical choices to ensure the app is fast, maintainable, and fun to work on.
+
+### ⚡ Next.js (App Router)
+Why? Because it gives us a solid production-ready framework out of the box. Even though this is largely a client-side app, Next.js handles the build optimization and asset routing seamlessly.
+
+### 🎨 Tailwind CSS
+Why? For speed and consistency. I wanted to iterate on the "Glassmorphism" UI quickly. writing standard CSS files would have slowed down the trial-and-error process of getting those translucent backgrounds *just right*.
+
+### 🐻 Zustand
+Why? This was a big decision vs. Redux or Context API.
+- **Vs Redux**: Redux is overkill. I didn't need complex reducers.
+- **Vs Context**: Context causes unnecessary re-renders. When a timer ticks 60 times a minute, you don't want the whole React tree re-rendering.
+- **Winner**: Zustand. It allows pinpoint state updates (updating *only* the timer digits) while keeping the app buttery smooth.
+
+## 🚀 Features
+
+- **Distraction-Free Audio**: Built-in phonk, score and lofi songs. No need to open Spotify or YouTube.
+- **Daily Focus Tracking**: Shows exactly how much time you've spent in "Focus" mode today.
+- **Intention Bar**: Set a visual goal (e.g., 4 hours) and watch it fill up as you work.
+- **Secure by Default**: Hardened HTTP headers and zero external request dependencies.
+
+**Running Locally (For development):**
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
+*Note: The app is purely client-side, but it uses Next.js optimization features that work best when built.*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Built to reclaim focus from the algorithm.* 🧠

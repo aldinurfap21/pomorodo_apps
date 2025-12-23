@@ -1,10 +1,10 @@
-// src/app/layout.tsx
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
-  subsets: ['latin'],  
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
 })
 
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
+
   twitter: {
     card: 'summary_large_image',
     title: 'Pomodoro Timer - Focus with Music',
     description: 'Free Pomodoro timer with lofi, epic score, and phonk music.',
     images: ['/og-image.png'],
-    creator: '@yourhandle', 
+    creator: '@yourhandle',
   },
-  
+
   robots: {
     index: true,
     follow: true,
@@ -70,23 +70,21 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
+
   manifest: '/manifest.json',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#7C3AED' },  
-    { media: '(prefers-color-scheme: dark)', color: '#1E1B4B' },   
+    { media: '(prefers-color-scheme: light)', color: '#7C3AED' },
+    { media: '(prefers-color-scheme: dark)', color: '#1E1B4B' },
   ],
-  
+
   viewport: {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,  
+    maximumScale: 1,
   },
-  
-  // verification: {
-  //   google: 'google-verification-code',
-  // },
-  
+
+
+
 }
 
 export default function RootLayout({

@@ -1,15 +1,15 @@
-/* src/app/globals.css */
 
-/* Tailwind directives */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base styles */
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #0b1220; /* slightly adjusted dark background */
+  background-color: #0b1220;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,13 +19,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom utility class (opsional) */
+
 .text-gradient {
-  /* kept for legacy use; now renders with the accent color */
+
   color: var(--accent);
 }
 
-/* Theme variables and small design tokens used by components */
+
 :root {
   --accent:rgb(186, 73, 73); 
   --card-bg: rgba(255,255,255,0.03);
@@ -43,7 +43,7 @@ html {
   backdrop-filter: blur(8px);
 }
 
-/* removed gradient-based accent-fill; use --accent color directly */
+
 .accent-fill {
   background: var(--accent);
 }
